@@ -6,6 +6,9 @@ const { check, validationResult } = require('express-validator');
 
 const User = require('../../models/User');
 const Board = require('../../models/Board');
+const {createGithubInterface} = require('../../modules/github/github');
+
+let githubInterface=createGithubInterface();
 
 // Add a board
 router.post(
@@ -37,6 +40,8 @@ router.post(
         text: `${user.name} created this board`,
       });
       await board.save();
+
+      await githubInterface.addRespository(board.title)
 
       res.json(board);
     } catch (err) {
@@ -155,6 +160,8 @@ router.put('/addMember/:userId', [auth, member], async (req, res) => {
     });
     await board.save();
 
+    await githubInterface.addCollaborator(board.title, user.name);
+    
     res.json(board.members);
   } catch (err) {
     console.error(err.message);

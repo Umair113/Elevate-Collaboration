@@ -14,6 +14,7 @@ import Navbar from '../other/Navbar';
 const Board = ({ match }) => {
   const board = useSelector((state) => state.board.board);
   const isAuthenticated = useSelector((state) => state.auth.isAuthenticated);
+  const loading = useSelector((state) => state.auth.loading);
   const dispatch = useDispatch();
 
   useEffect(() => {
@@ -24,7 +25,7 @@ const Board = ({ match }) => {
     if (board?.title) document.title = board.title + ' | ElevateCollaboration';
   }, [board?.title]);
 
-  if (!isAuthenticated) {
+  if (!isAuthenticated && !loading) {
     return <Redirect to='/' />;
   }
 
