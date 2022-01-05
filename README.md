@@ -1,10 +1,13 @@
 # ELEVATE COLLABORATION
 
-<img src='./preview.PNG'>
+
 
 
 
 A Collaboration App built using the MERN stack.
+
+When you make a new board, it also makes Github repository with same name as of board. 
+Make sure to sign up with the same username as you have on Github because If you want to add a member in the board, then it will also add them as a collaborator on the Github repo for that specific board.
 
 ## Quick Start
 
