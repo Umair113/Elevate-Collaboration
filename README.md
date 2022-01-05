@@ -1,7 +1,5 @@
 # ELEVATE COLLABORATION
 
-<img src='./preview.PNG'>
-
 
 
 A Collaboration App built using the MERN stack.
