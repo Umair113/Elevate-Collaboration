@@ -56,7 +56,7 @@ const Register = () => {
       <CssBaseline />
       <div className={classes.paper}>
         <Typography component='h1' variant='h4'>
-        ElevateCollaboration
+        Elevate Collaboration
         </Typography>
         <Typography component='h1' variant='h5'>
           Sign up
@@ -75,6 +75,10 @@ const Register = () => {
                 value={name}
                 onChange={(e) => onChange(e)}
               />
+              <Typography component='p'>
+                  If you want to use our Github Collaboration feature, then 
+                  you need to sign up with the same name as you have on Github 
+              </Typography>
             </Grid>
             <Grid item xs={12}>
               <TextField
