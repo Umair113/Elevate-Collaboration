@@ -114,7 +114,10 @@ body {
   align-items: center;
   justify-content: center;
 }
-
+ /*hiding unused  boards*/
+#board62651f6f8f00d849ec369b71,#board62651e6f6ed40931543df76b,#board62651e186ed40931543df769,#board62651d3ee23ef43e50a2ee94,#board62651c9fe23ef43e50a2ee92,#board62651c31e23ef43e50a2ee90, #board62646e5913f83643b49e33e4, #board62646e5813f83643b49e33e3, #board62646d9f13f83643b49e33de, #board62646d9f13f83643b49e33db,#board62646d9f13f83643b49e33da,#board62646d9e13f83643b49e33d8,#board62646d8d13f83643b49e33d6{
+  display: none;
+}
 .dashboard .board-card {
   width: 220px;
   height: 120px;

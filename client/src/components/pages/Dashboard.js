@@ -33,7 +33,7 @@ const Dashboard = () => {
         {loading && <CircularProgress className='dashboard-loading' />}
         <div className='boards'>
           {boards.map((board) => (
-            <Link key={board._id} to={`/board/${board._id}`} className='board-card'>
+            <Link key={board._id} to={`/board/${board._id}`} className='board-card' id={`board${board._id}`}>
               {board.title}
             </Link>
           ))}
